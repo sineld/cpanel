@@ -1,21 +1,57 @@
-## Laravel PHP Framework
+## Laravel Admin Panel
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
+[![Build Status](https://travis-ci.org/stevemo/cpanel.png)](https://travis-ci.org/stevemo/cpanel)
+[![Total Downloads](https://poser.pugx.org/stevemo/cpanel/d/total.png)](https://packagist.org/packages/stevemo/cpanel)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+Laravel 4 package used to provide an admin panel with user, groups and permissions management.
+This package is currently under active development.
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+##Features
+* Cartalyst Sentry package
+* Anahkiasen Former package
+* Twitter Bootstrap 2.3.1
+* Font-awesome 3.2.0
+* Users, Groups and Permissions out of the box.
+* Base controller for admin panel development
+* Most of the views can be replaced by your own in the config file
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+##Installation
+Begin by installing this package through Composer. Edit your project's `composer.json` file to require `stevemo/cpanel`.
 
-## Official Documentation
+```javascript
+{
+    "require": {
+        "stevemo/cpanel": "dev-develop"
+    }
+}
+```
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+Update your packages with `composer update` or install with `composer install`.
 
-### Contributing To Laravel
+You need to add the following service provider.
+Open `app/config/app.php`, and add a new items to the providers array.
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+```php
+Former\FormerServiceProvider
+Cartalyst\Sentry\SentryServiceProvider
+Stevemo\Cpanel\CpanelServiceProvider
+```
 
-### License
+Then add the following Class Aliases
+```php
+'Former' => 'Former\Facades\Former',
+'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Finally run the following command in the terminal. `php artisan cpanel:install`
+This will publish the config files for Cartalyst/Sentry, Anahkiasen/Former and Stevemo/Cpanel also it will run the migration.
+
+To create a user simply do `php artisan cpanel:user`
+
+Done! Just go to [http://localhost/admin](http://localhost/admin) to access the admin panel.
+
+##Missing
+* Send Activation code by email when user register
+* Password reset/reminder
+* unit test… started reading Laravel Testing decoded ;-)
+* Documentation
