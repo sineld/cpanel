@@ -11,7 +11,7 @@
  Target Server Version : 50529
  File Encoding         : utf-8
 
- Date: 08/14/2013 17:48:06 PM
+ Date: 08/14/2013 21:52:16 PM
 */
 
 SET NAMES utf8;
@@ -127,7 +127,7 @@ CREATE TABLE `users` (
 --  Records of `users`
 -- ----------------------------
 BEGIN;
-INSERT INTO `users` VALUES ('1', 'sineld@gmail.com', '$2y$10$9so7btrSnBJrT10mbsxEwO7QBBLNFjjEY2BjLvQylhp18PhPNRfly', '{\"superuser\":1}', '1', null, '2013-08-14 14:11:53', '2013-08-14 14:12:28', '$2y$10$lrUIV7l0wNYPuItw1mfdm.hR4dH4PDAfGjNvHvi4RuSySxiwMAMP6', null, 'Sinan Eldem', null, '2013-08-14 14:11:53', '2013-08-14 14:12:28'), ('2', 'tuana@gmail.com', '$2y$10$/lHj.NhiFiyKX.2aMuP90eKY.ATo9BGRdNHT.Ejin5J.kI55xFAP6', '{\"users.view\":1,\"groups.view\":1,\"groups.update\":1,\"permissions.view\":1}', '1', null, '2013-08-14 14:15:27', '2013-08-14 14:27:01', '$2y$10$lBeGcSyaGHxzcJfeN0ki.OY8gxsvc6GzMv93ZqszLKyX9k/4Ve1te', null, 'Tuana', 'Şeyma', '2013-08-14 14:15:27', '2013-08-14 14:27:01');
+INSERT INTO `users` VALUES ('1', 'sineld@gmail.com', '$2y$10$9so7btrSnBJrT10mbsxEwO7QBBLNFjjEY2BjLvQylhp18PhPNRfly', '{\"superuser\":1}', '1', null, '2013-08-14 14:11:53', '2013-08-14 18:48:49', '$2y$10$Hc16Ep/OB3MKqtF3YDoy/.pThKIbpsLM6psRLGXLloCQixxYjxdb6', null, 'Sinan Eldem', null, '2013-08-14 14:11:53', '2013-08-14 18:48:49'), ('2', 'tuana@gmail.com', '$2y$10$/lHj.NhiFiyKX.2aMuP90eKY.ATo9BGRdNHT.Ejin5J.kI55xFAP6', '{\"users.view\":1,\"groups.view\":1,\"groups.update\":1,\"permissions.view\":1,\"admin.view\":1}', '1', null, '2013-08-14 14:15:27', '2013-08-14 18:49:57', '$2y$10$75jvZR3db93l31DMQDrI9OuW3pvPqeHBEJfUGs5PgJyuuUWo6msjm', null, 'Tuana', 'Şeyma', '2013-08-14 14:15:27', '2013-08-14 18:49:57');
 COMMIT;
 
 -- ----------------------------
